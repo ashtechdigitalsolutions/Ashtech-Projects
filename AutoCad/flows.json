@@ -1,0 +1,1930 @@
+[
+    {
+        "id": "fa93df085b5e90aa",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9edd6e2bcb06c3f8",
+        "type": "tab",
+        "label": "Google Maps",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "929742f0246c257a",
+        "type": "subflow",
+        "name": "GoogleMaps",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "6d831dcd5fe1f4a7"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 560,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "6d831dcd5fe1f4a7",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 560,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "924f82a1be45d91e",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "f89cfe080d5f9c07",
+        "type": "mqtt-broker",
+        "name": "Hive",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "af8f6494b8ef81fa",
+        "type": "ui_group",
+        "name": "Delivery Id Tab ",
+        "tab": "a83e043de96d3553",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a83e043de96d3553",
+        "type": "ui_tab",
+        "name": "Vehicle Data",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b065db37b36ff4c9",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1ea23cd54ee0fe96",
+        "type": "ui_group",
+        "name": "Temperature Chart Tab",
+        "tab": "a83e043de96d3553",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a3bfd22d9142150a",
+        "type": "firebase admin",
+        "name": "admin"
+    },
+    {
+        "id": "6e783676.92e158",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "8071b27e83febf9a",
+        "type": "ui_group",
+        "name": "Map Sample Data",
+        "tab": "67a802d88610f9f3",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "67a802d88610f9f3",
+        "type": "ui_tab",
+        "name": "Google Maps",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6d831dcd5fe1f4a7",
+        "type": "function",
+        "z": "929742f0246c257a",
+        "name": "Process Map Requests",
+        "func": "var locations = global.get(\"gmapsLocations\");\nif ( typeof(locations) === \"undefined\" || locations === null ) {\n   // node.send({\"payload2\":locations});\n    locations = {\"markerData\":[]};\n    //locations = {\"markerData\":msg.payload.markerData};\n    global.set(\"gmapsLocations\",locations); \n}\n//node.send({\"payload1\":locations});\n\n// if a request for removal of all markers then undertake only this command\n//if (typeof(msg.payload.command)!== \"undefined\") {\nif (msg.payload.command){\n    if (msg.payload.command.removeMarkers === true) {\n       // node.send({\"payload2\":\"clear gmapsLocations \"});\n        global.set(\"gmapsLocations\", null );  \n    }\n // otherwise check for removal of a defined (by 'title') marker\nelse if(msg.payload.command && msg.payload.command.removeMarker){\n    //node.send({\"payload3\":locations.markerData.length});\n  if (locations.markerData && locations.markerData.length>0) {\n     // node.send({\"payload4\":locations});\n    for (var i =  locations.markerData.length-1; i >=0 ; i-- ) {\n        //node.send({\"payload5\":locations});\n        if (locations.markerData[i].title === msg.payload.command.removeMarker) {\n            locations.markerData.splice(i,1);  // remove item \n            global.set(\"gmapsLocations\", locations); // update our application's list of markers\n    }\n   }\n  }\n }\n}\n\n\n    //node.send({\"payload6\":locations});\n    if (msg.payload.markerData){\n      locations = global.get(\"gmapsLocations\");\n      // get the new markers \n      for (var i = 0; i < msg.payload.markerData.length; i++ ) {\n        locations.markerData.push(msg.payload.markerData[i]); \n      }\n    // store the updated markers list\n    global.set(\"gmapsLocations\", locations);\n //  }\n    }\n\nreturn msg;\n\nfunction isEmpty(obj) {\n    for(var prop in obj) {\n        if(obj.hasOwnProperty(prop))\n            return false;\n    }\n return true;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "640e6d4ef863902b"
+            ]
+        ]
+    },
+    {
+        "id": "a84d232db2510ca7",
+        "type": "function",
+        "z": "929742f0246c257a",
+        "name": "Send Markers to Map",
+        "func": "// This function will fire when a web page refresh is received. \n// It will send current location data to the map.\n//\n//The received message is stored in 'msg'\n// It will have at least a 'payload' property:\n//   console.log(msg.payload);\n// The 'context' object is available to store state\n// between invocations of the function\n//   context = {};\nvar locations = global.get(\"gmapsLocations\");\nif ( typeof(locations) === \"undefined\" || locations === null){\n   //no stored markers in Node-Red application\n   msg.payload = {\"markerData\":[]};\n}\nelse {\n    // get stored markers\n    msg.payload= locations;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "640e6d4ef863902b"
+            ]
+        ]
+    },
+    {
+        "id": "d32f8932b6b21a8d",
+        "type": "http response",
+        "z": "929742f0246c257a",
+        "name": "",
+        "x": 630,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d22b317d349ec9c7",
+        "type": "http in",
+        "z": "929742f0246c257a",
+        "name": "",
+        "url": "/map",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 320,
+        "wires": [
+            [
+                "a153ae7d960295fd",
+                "88a4537afb92a4e7"
+            ]
+        ]
+    },
+    {
+        "id": "50d0b420bee7bcb9",
+        "type": "comment",
+        "z": "929742f0246c257a",
+        "name": "Access To Google Maps",
+        "info": "",
+        "x": 193.33333333333334,
+        "y": 33.333333333333336,
+        "wires": []
+    },
+    {
+        "id": "640e6d4ef863902b",
+        "type": "mqtt out",
+        "z": "929742f0246c257a",
+        "name": "",
+        "topic": "unique-topic/commands",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6e783676.92e158",
+        "x": 690,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "924f82a1be45d91e",
+        "type": "mqtt in",
+        "z": "929742f0246c257a",
+        "name": "",
+        "topic": "unique-topic/webrefresh",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6e783676.92e158",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "a84d232db2510ca7"
+            ]
+        ]
+    },
+    {
+        "id": "a153ae7d960295fd",
+        "type": "function",
+        "z": "929742f0246c257a",
+        "name": "MQTT Topic-Root and Google Maps API Key",
+        "func": "msg.uniqueMQTT = \"unique-topic\"; // CHANGE THIS!!!\n//msg.gmap_api_key = \"YOUR-GOOGLE-MAPS-KEY\";\nmsg.gmap_api_key = \"AIzaSyB8UYxXzy-LZZY7BZjYYR5wzLCQDtsH72I\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "30e40fa7a1a0f5ec"
+            ]
+        ]
+    },
+    {
+        "id": "30e40fa7a1a0f5ec",
+        "type": "template",
+        "z": "929742f0246c257a",
+        "name": "mapping web page",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n\n<head>\n    <title>Node-Red-IoT</title>\n    <script type=\"text/javascript\" src=\"http://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js\"\n        type=\"text/javascript\"></script>\n    <script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js\"></script>\n     <script type=\"text/javascript\"src=\"http://maps.google.com/maps/api/js?key={{gmap_api_key}}\"></script>\n  <script type=\"text/javascript\" src=\"http://34.28.30.37:1880/gmaps.js\"></script> https://yourjavascript.com/4594301102/gmaps.js\n\n    <style type=\"text/css\" media=\"screen\">\n        #map {\n            position: absolute;\n            top: 0;\n            bottom: 0;\n            left: 0;\n            right: 0;\n        }\n    </style>\n</head>\n\n<body>\n\n    <div id=\"map\"></div>\n    <script type=\"text/javascript\">\n    \n\n        // Connect to test.mosquitto.org This hosts a publicly available Eclipse Mosquitto MQTT server/broker\n        // See the web page at: https://test.mosquitto.org/ for more infomation\n        // With test.mosquitto.org, might create a socket error on either port 8081 or 8080 \n        // even on same browser type on various installs. \n        // !!!!!!!!!!!!!!!!!!! 17th March 2021\n        // I've changed to broker.hivemq.com. \n        // Tested on Chrome, Edge, Safari and Firefox on Mac. Chrome on Windows.\n        //client = new Paho.MQTT.Client(\"test.mosquitto.org\", 8080, \"myClientId_\" + new Date().getTime()); // Variable results. Websocket errors. - don't use\n        client = new Paho.MQTT.Client(\"broker.hivemq.com\", 8000, \"myClientId_\" + new Date().getTime());\n        myTopicRoot = \"{{uniqueMQTT}}\";\n        myTopic =  myTopicRoot + \"/commands\";\n\n        var nodeRedRequest = {};\n        var command = {};\n\n        client.onConnectionLost = onConnectionLost;\n        client.connect({ onSuccess: onConnect, keepAliveInterval: 20 });\n        client.onMessageArrived = onMessageArrived;\n\n        //let count = 0;\n        function onConnect() {\n            console.log(\"onConnect\");\n            client.subscribe(myTopic);\n            // DISABLED Web page publishes data - just for testing purposes. \n            // setInterval(() => { publish(myTopic, `The count is now ${count++}`) }, 1000)\n            publish( myTopicRoot + \"/webrefresh\", \"refresh\");\n\n        }\n        \n        function publish (dest, msg){\n            //console.log('desint :', dest, 'msg:', msg);\n            var message = new Paho.MQTT.Message(msg);\n            message.destinationName = dest;\n            client.send(message);\n        }\n\n        var map;\n\n        $(document).ready(function () {\n            // Centre map on Glasgow to start\n            map = new GMaps({\n                div: '#map',\n                lat: 55.866161,\n                lng: -4.25231\n            });\n\n            map.setZoom(7);  // initial zoom\n\n        });\n\n\n\n        function onConnectionLost(responseObject) {\n            if (responseObject.errorCode !== 0) {\n                console.log(\"onConnectionLost:\" + responseObject.errorMessage);\n                location.reload(true); // reload web page\n            }\n            \n        }\n\n        \n        function onMessageArrived(message) {\n            //let el = document.createElement('div')\n            // el.innerHTML = \"hello\" + message.payloadString\n            //document.body.appendChild(el)\n            var command_string = message.payloadString;\n            var nodeRedRequest = JSON.parse(command_string);\n            if (nodeRedRequest.command) {\n                var command = nodeRedRequest.command;\n            }\n            // if there are markers in the request...\n            if (nodeRedRequest.markerData) {\n                var myMarkers = true;\n                var latlng = nodeRedRequest.markerData;\n                // if (nodeRedRequest.markerData[0].click)\n                //  nodeRedRequest.markerData[0].click = JSON.parse(nodeRedRequest.markerData[0].click);\n            }\n            /*  PB: ORIGINAL CODE\n            var array = $.map(latlng, function(el) {\n                    return [[el.lat, el.lng]];\n                }); */\n            // map.removeMarkers();   // PB: NOW CONDITIONAL ON MY COMMAND OPTIONS\n            // map.removePolylines(); // PB: NOT USING THESE IN MY EXAMPLE\n\n            // if there are commands in the request...\n            if (command) {\n                if (command.zoom){\n                    map.setZoom(command.zoom);\n                    console.log(\"Zoom\");\n                }\n                if (command.removeMarkers) {\n                    // remove ALL markers\n                    map.removeMarkers();\n                    console.log(\"Remove all markers\");\n                }\n                // remove single marker by TITLE  \n                if (command.removeMarker) {\n                    myRemoveMarker(map, command.removeMarker);\n                    console.log(\"Remove single marker\");\n                }\n                // Centre the map at lat,lng\n                if (command.centre){\n                    map.setCenter(command.centre.lat, command.centre.lng);\n                    console.log(\"Center map\");\n                }\n            }\n            if (myMarkers) {  // if we included markers in the request...\n                if (latlng.length > 0) {\n                    console.log(\"Got marker list (\" + latlng.length + \"), centering at \" + latlng[0].lat + \", \" + latlng[0].lng, latlng);\n                    // if you want, set centre point at location of first marker    \n                    //map.setCenter(latlng[0].lat, latlng[0].lng); \n                    map.addMarkers(latlng);\n                    //var m = map.markers[1];\n                    //map.removeMarker(m);\n\n                }\n            }\n        }\n\n\n        // remove a single marker     \n        function myRemoveMarker(myMap, myMarkerTitle) {\n            var markers = myMap.markers;\n            var length = markers.length;\n            if (length > 0) {\n                //go from end of array downwards since the array size\n                //diminishes if elements are deleted!\n                for (var i = length - 1; i >= 0; i--) {\n                    if (markers[i].title === myMarkerTitle) {\n                        // will remove multiple entries for the same title (if present)\n                        myMap.removeMarker(markers[i]);\n                        var markers2 = myMap.markers;\n                    }\n                }\n            }\n        }\n        \n\n    </script>\n</body>\n\n</html>",
+        "output": "str",
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "d32f8932b6b21a8d"
+            ]
+        ]
+    },
+    {
+        "id": "88a4537afb92a4e7",
+        "type": "debug",
+        "z": "929742f0246c257a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 210,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "273c7b8cd874f5ac",
+        "type": "comment",
+        "z": "929742f0246c257a",
+        "name": "NEEDS STUDENT CUSTOMISATION",
+        "info": "Requires a topic:\n[something_unique]/webrefresh\nExample:\nhdsg562e372egdwt6dbb6723/webrefresh\nDo NOT use this example!\n\nThe [something_unique] part must be the same as in the [something_unique]/commands MQTT Output Node.",
+        "x": 170,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ac6a8517be4edcce",
+        "type": "comment",
+        "z": "929742f0246c257a",
+        "name": "NEEDS STUDENT CUSTOMISATION",
+        "info": "Requires a topic:\n[something_unique]/webrefresh\nExample:\nhdsg562e372egdwt6dbb6723/webrefresh\nDo NOT use this example!\n\nThe [something_unique] part must be the same as in the [something_unique]/webrefresh MQTT Input Node.",
+        "x": 730,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f6b358dec55bd32c",
+        "type": "comment",
+        "z": "929742f0246c257a",
+        "name": "NEEDS TWO STUDENT CUSTOMISATIONS",
+        "info": "# Requires a topic:\n[something_unique]\nExample:\nhdsg562e372egdwt6dbb6723\nDo NOT use this example!\n\nThe [something_unique] part must be the same as in the [something_unique] parts in the MQTT Input and Output Nodes.\n\nRequires a Goggle Maps API Key\nInsert you key as a string in msg.gmap_api_key",
+        "x": 370,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "3bdd0c18ca16cc08",
+        "type": "mqtt in",
+        "z": "fa93df085b5e90aa",
+        "name": "state / fault message",
+        "topic": "pb54327xyCW-2-2024/dev-PC0099/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f89cfe080d5f9c07",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "5f356c52f2d38fce"
+            ]
+        ]
+    },
+    {
+        "id": "5df52bd5164f6729",
+        "type": "mqtt in",
+        "z": "fa93df085b5e90aa",
+        "name": "telemetry / vehicle message",
+        "topic": "pb54327xyCW-2-2024/dev-PC0099/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f89cfe080d5f9c07",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 540,
+        "wires": [
+            [
+                "4bbca3960f2303fa",
+                "971c276d61833364",
+                "73a239b93deb8640",
+                "4be792e71d84c73e",
+                "8455f6b6a5d656ca"
+            ]
+        ]
+    },
+    {
+        "id": "4bbca3960f2303fa",
+        "type": "function",
+        "z": "fa93df085b5e90aa",
+        "name": "extract delivery id",
+        "func": "// Function node code\ntry {\n    // Extract payload from the incoming message\n    var payload = msg.payload;\n    \n\n    // Prepare data for vehicle messages\n\n    var delivery_id = payload.delivery_id;\n\n    // Send delivery_id to the text output\n    msg.payload =  delivery_id;\n    node.send(msg);\n        \n \n} catch (error) {\n    // Error occurred while accessing payload properties\n    node.warn(\"Error accessing payload properties: \" + error.message);\n}\n\nreturn null; // Since we have already sent the messages or encountered an error, no need to return anything else\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 540,
+        "wires": [
+            [
+                "f78da3f7db2042f1"
+            ]
+        ]
+    },
+    {
+        "id": "f78da3f7db2042f1",
+        "type": "ui_text",
+        "z": "fa93df085b5e90aa",
+        "group": "af8f6494b8ef81fa",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Delivery Id",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 650,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "971c276d61833364",
+        "type": "function",
+        "z": "fa93df085b5e90aa",
+        "name": "Extract Temp",
+        "func": "// Function node code\ntry {\n    // Extract payload from the incoming message\n    var payload = msg.payload;\n     \n        // Prepare data for chart\n        var temperature = payload.temperature;\n\n        \n        // Send vehicle_id to the text output\n        msg.payload = temperature;\n        node.send(msg);\n         \n} catch (error) {\n    // Error occurred while accessing payload properties\n    node.warn(\"Error accessing payload properties: \" + error.message);\n}\n\nreturn null; // Since we have already sent the messages or encountered an error, no need to return anything else\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 600,
+        "wires": [
+            [
+                "6fc5d158822d44c8"
+            ]
+        ]
+    },
+    {
+        "id": "6fc5d158822d44c8",
+        "type": "ui_chart",
+        "z": "fa93df085b5e90aa",
+        "name": "Vehicle Temperature History",
+        "group": "1ea23cd54ee0fe96",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature ( °C )",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Waiting for Data",
+        "dot": false,
+        "ymin": " ",
+        "ymax": " ",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 700,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73a239b93deb8640",
+        "type": "function",
+        "z": "fa93df085b5e90aa",
+        "name": "Extract and prepare telemetry for Firestore",
+        "func": "\n// Function node code\ntry {\n    // Telemetry messages function node code\n    var msgType = \"vehicle\";\n    var vehicle_id = msg.payload.vehicle_id;\n    var temperature = msg.payload.temperature;\n    var date_time_UTC_milliseconds = Date.now(); // Generate UTC timestamp in milliseconds\n    \n    // Prepare data for Firestore\n    msg.payload = {\n        msgType: msgType,\n        vehicle_id: vehicle_id,\n        vehicle_storage_temperature: temperature,\n        date_time_UTC_milliseconds: date_time_UTC_milliseconds\n    };\n    \n    return msg;\n        \n\n} catch (error) {\n    // Error occurred while accessing payload properties\n    node.warn(\"Error accessing payload properties: \" + error.message);\n}\n\nreturn null; // Since we have already sent the messages or encountered an error, no need to return anything else\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 660,
+        "wires": [
+            [
+                "036ba9ffeac808a7",
+                "833b5dde647c045c"
+            ]
+        ]
+    },
+    {
+        "id": "5f356c52f2d38fce",
+        "type": "function",
+        "z": "fa93df085b5e90aa",
+        "name": "Extract and prepare state / fault for Firestore",
+        "func": "\ntry {\n    // State messages function node code\n    var msgType = \"fault\"; // Fixed type for state messages\n    var vehicle_id = msg.payload.vehicle_id;\n    var date_time_UTC_milliseconds = Date.now(); // Generate UTC timestamp in milliseconds\n    var vehicleFault = msg.payload.vehicleFault;\n    \n    // Prepare data for Firestore\n    msg.payload = {\n        msgType: msgType,\n        vehicle_id: vehicle_id,\n        date_time_UTC_milliseconds: date_time_UTC_milliseconds,\n        vehicleFault: vehicleFault\n    };\n    \n    return msg; \n} catch (error) {\n    // Error occurred while accessing payload properties\n    node.warn(\"Error accessing payload properties: \" + error.message);\n}\n\nreturn null; // Since we have already sent the messages or encountered an error, no need to return anything else\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 740,
+        "wires": [
+            [
+                "833b5dde647c045c"
+            ]
+        ]
+    },
+    {
+        "id": "646bdbc7705e99f6",
+        "type": "function",
+        "z": "fa93df085b5e90aa",
+        "name": "get 10 docs",
+        "func": "// Function code for querying recent vehicle temperature readings\nmsg.firestore = {\n    collection: 'vehicle_data',\n    query: [\n        { where: [\"msgType\", \"==\", \"vehicle\"] }, // Filter for vehicle messages\n        { orderBy: [\"date_time_UTC_milliseconds\", \"desc\"] }, // Order by timestamp descending\n        { limit: 10 } // Limit to the most recent 10 documents\n    ]\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 920,
+        "wires": [
+            [
+                "3a68ef14861a58c6"
+            ]
+        ]
+    },
+    {
+        "id": "8734740c76c1c2ba",
+        "type": "debug",
+        "z": "fa93df085b5e90aa",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "6117ac76bc95376f",
+        "type": "inject",
+        "z": "fa93df085b5e90aa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 920,
+        "wires": [
+            [
+                "646bdbc7705e99f6"
+            ]
+        ]
+    },
+    {
+        "id": "1fb469e260ed0392",
+        "type": "function",
+        "z": "fa93df085b5e90aa",
+        "name": "highest 30-min vehicle temperature",
+        "func": "// Function code for querying vehicle temperature readings for the last 30 minutes\nvar thirtyMinutesAgo = new Date(Date.now() - (30 * 60 * 1000)); // Calculate timestamp for 30 minutes ago\nmsg.firestore = {\n    collection: 'vehicle_data',\n    query: [\n        { where: [\"msgType\", \"==\", \"vehicle\"] }, // Filter for vehicle messages\n        { where: [\"date_time_UTC_milliseconds\", \">\", thirtyMinutesAgo.getTime()] }, // Filter for last 30 minutes\n        { orderBy: { field: \"vehicle_storage_temperature\", direction: \"desc\" } }, // Order by temperature descending\n        // { limit: 1 } // Limit to 1 document (highest temperature)\n    ]\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 800,
+        "wires": [
+            [
+                "3147623de8063f25"
+            ]
+        ]
+    },
+    {
+        "id": "3a8d71272803c18b",
+        "type": "inject",
+        "z": "fa93df085b5e90aa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 800,
+        "wires": [
+            [
+                "1fb469e260ed0392"
+            ]
+        ]
+    },
+    {
+        "id": "f2b8428a33a28a31",
+        "type": "function",
+        "z": "fa93df085b5e90aa",
+        "name": "Extract data and set Topic Func",
+        "func": "// Extract relevant temperature values and timestamps from Firebase response\nvar firestoreData = msg.payload;\n\nvar temperatureData = Object.values(firestoreData).map(function(entry) {\n    return entry.vehicle_storage_temperature;\n});\n\n// Configure 'statistics' node\nmsg.payload = temperatureData; // Input data for the 'statistics' node\nmsg.topic = 'max'; // Operation to find maximum temperature\nnode.send(msg)\n\n ",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 800,
+        "wires": [
+            [
+                "6ed5e9e2eba3e743"
+            ]
+        ]
+    },
+    {
+        "id": "b42e366d42e68288",
+        "type": "debug",
+        "z": "fa93df085b5e90aa",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "6ed5e9e2eba3e743",
+        "type": "statistics",
+        "z": "fa93df085b5e90aa",
+        "name": "",
+        "dataSetSize": 0,
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "topic",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 980,
+        "y": 860,
+        "wires": [
+            [
+                "b42e366d42e68288"
+            ]
+        ]
+    },
+    {
+        "id": "036ba9ffeac808a7",
+        "type": "debug",
+        "z": "fa93df085b5e90aa",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "833b5dde647c045c",
+        "type": "Firestore out",
+        "z": "fa93df085b5e90aa",
+        "name": "",
+        "collection": "vehicle_data",
+        "document": "",
+        "operation": "add",
+        "admin": "a3bfd22d9142150a",
+        "eject": false,
+        "x": 850,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3a68ef14861a58c6",
+        "type": "Firestore in",
+        "z": "fa93df085b5e90aa",
+        "name": "",
+        "collection": "",
+        "group": false,
+        "document": "",
+        "realtime": false,
+        "query": [],
+        "admin": "a3bfd22d9142150a",
+        "snapHandler": "",
+        "eject": false,
+        "x": 560,
+        "y": 920,
+        "wires": [
+            [
+                "8734740c76c1c2ba"
+            ]
+        ]
+    },
+    {
+        "id": "3147623de8063f25",
+        "type": "Firestore in",
+        "z": "fa93df085b5e90aa",
+        "name": "",
+        "collection": "",
+        "group": false,
+        "document": "",
+        "realtime": false,
+        "query": [],
+        "admin": "a3bfd22d9142150a",
+        "snapHandler": "",
+        "eject": false,
+        "x": 560,
+        "y": 800,
+        "wires": [
+            [
+                "f2b8428a33a28a31"
+            ]
+        ]
+    },
+    {
+        "id": "4be792e71d84c73e",
+        "type": "function",
+        "z": "fa93df085b5e90aa",
+        "name": "Setup data for google maps",
+        "func": "// Function node code\ntry {\n\n\n    // Extract payload from the incoming message\n    var payload = msg.payload;\n    var location = payload.vehicle_location; // Vehicle location coordinates\n\n    // Preparing the message payload for Google Maps\n    msg.payload = {\n         \"command\":{  \"removeMarker\":\"Delivery Location\"},\n        \"markerData\": [\n            {\n                \"lat\": location[0], // Latitude\n                \"lng\": location[1], // Longitude \n                \"title\": \"Delivery Location\",\n                \"infoWindow\": {\n                    \"content\": \"<p>Temperature: \" + payload.temperature + \"°C</p><p>Delivery ID: \" + payload.delivery_id + \"</p>\"\n                }\n            }\n        ]\n    };\n\n   \n    node.send(msg);\n\n} catch (error) {\n    // Log a warning in case of error\n    node.warn(\"Error accessing payload properties: \" + error.message);\n}\n\nreturn null; // Stop further automatic message propagation as node.send is used\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 460,
+        "wires": [
+            [
+                "00603392287158a2",
+                "2f274c2a97f82cfb"
+            ]
+        ]
+    },
+    {
+        "id": "8455f6b6a5d656ca",
+        "type": "debug",
+        "z": "fa93df085b5e90aa",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "00603392287158a2",
+        "type": "debug",
+        "z": "fa93df085b5e90aa",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "2f274c2a97f82cfb",
+        "type": "link out",
+        "z": "fa93df085b5e90aa",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "96cf9a54f7335f47"
+        ],
+        "x": 815,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "109faf390f31c150",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Add Marker \"GEN-A10888\"",
+        "func": "msg ={\"payload\":{\n    \"command\":{\"zoom\":16},\n    \"markerData\":[  { \n        \"lat\":55.866410,\n        \"lng\":-4.25750,\n        \"title\":\"GEN-A10888\",\n        //\"draggable\":true,\n        \"icon\": \"http://maps.google.com/mapfiles/ms/micons/green.png\"        \n                    }\n                 ]\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 130.55555248260498,
+        "wires": [
+            [
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "a3eacfefc04993f6",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Add Marker \"GEN-A10123\"",
+        "func": "msg ={\"payload\":{\n    \"command\":{\"zoom\":16},\n    \"markerData\":[  {   \"lat\":55.866310,\n                        \"lng\":-4.25850,\n                        \"title\":\"GEN-A10123\",\n                        \"label\": \"22C\",\n                        \"icon\": \"http://maps.google.com/mapfiles/ms/micons/blue.png\",\n                        \"infoWindow\": {\"content\": \"<p>Temperature: 22C</p>\" }\n                    }\n                 ]\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 170.55555248260498,
+        "wires": [
+            [
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "250bf25cc0bcdecb",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "109faf390f31c150"
+            ]
+        ]
+    },
+    {
+        "id": "780e6358a83ee8c4",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 179.55555248260498,
+        "wires": [
+            [
+                "a3eacfefc04993f6"
+            ]
+        ]
+    },
+    {
+        "id": "ccdebd5289c64f18",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Remove Marker \"GEN-A10123\"",
+        "func": "msg ={\"payload\":{\n    \"command\":{\"removeMarker\":\"GEN-A10123\"},\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 210.55555248260498,
+        "wires": [
+            [
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "4336b3db16d09825",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 219.55555248260498,
+        "wires": [
+            [
+                "ccdebd5289c64f18"
+            ]
+        ]
+    },
+    {
+        "id": "4bda75d5758a8710",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "8d435886134fbbd2"
+            ]
+        ]
+    },
+    {
+        "id": "8d435886134fbbd2",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Update Marker \"GEN-A10123\"",
+        "func": "msg ={\"payload\":{\n    \"command\":{\"zoom\":16, \"removeMarker\":\"GEN-A10123\"},\n     \"markerData\":[  {   \"lat\":55.866310,\n                        \"lng\":-4.25850,\n                        \"title\":\"GEN-A10123\",\n                        \"label\": \"19C\",\n                        \"icon\": \"http://maps.google.com/mapfiles/ms/micons/yellow.png\",\n                        \"infoWindow\": {\"content\": \"<p>Temperature: 19C</p><p>Humidity: 70<p>\" }\n                    }\n                 ]\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 250.55555248260498,
+        "wires": [
+            [
+                "8e489aaa937d5ad1",
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "a3d3b04357d56602",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Add an array of markers",
+        "func": "msg = {\"payload\":{\n    \"command\":{\"zoom\":16},\n    \"markerData\":[\n        {\"lat\":55.863614,\"lng\":-4.254407,\"title\":\"LOC-001\", \"infoWindow\": {\"content\": \"<p>Pollution Index: 33</p>\" }},\n        {\"lat\":55.863792,\"lng\":-4.255786,\"title\":\"LOC-002\"},\n        {\"lat\":55.864144,\"lng\":-4.2557,\"title\":\"LOC-003\"},\n        {\"lat\":55.863991,\"lng\":-4.254332,\"title\":\"LOC-004\"}\n    ]\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 290.555552482605,
+        "wires": [
+            [
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "01bdf11e4dadd2c6",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 299.555552482605,
+        "wires": [
+            [
+                "a3d3b04357d56602"
+            ]
+        ]
+    },
+    {
+        "id": "30cddfac7b334fbb",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Debug: get local list of Markers",
+        "func": "node.send(global.get(\"gmapsLocations\"));\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 380,
+        "y": 390.555552482605,
+        "wires": [
+            [
+                "20530ddd8999c8b8"
+            ]
+        ]
+    },
+    {
+        "id": "649a64fe54613b03",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 390.555552482605,
+        "wires": [
+            [
+                "30cddfac7b334fbb"
+            ]
+        ]
+    },
+    {
+        "id": "20530ddd8999c8b8",
+        "type": "debug",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "DB3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "2baa02f0ca818f93",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Clear all markers",
+        "func": "msg ={\"payload\":{\n    \"command\":{\"removeMarkers\":true}\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 90.55555248260498,
+        "wires": [
+            [
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "266b0fb937947beb",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 149.7777328491211,
+        "y": 92.44444274902344,
+        "wires": [
+            [
+                "2baa02f0ca818f93"
+            ]
+        ]
+    },
+    {
+        "id": "dc6e70ec7e954b07",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Zoom 16",
+        "func": "msg ={\"payload\":{\n    \"command\":{\"zoom\":16}\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 50.55555248260498,
+        "wires": [
+            [
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "245618170abb4535",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150.88884735107422,
+        "y": 48,
+        "wires": [
+            [
+                "dc6e70ec7e954b07"
+            ]
+        ]
+    },
+    {
+        "id": "9d2ef7a41a8a5933",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Remove Marker \"LOC-002\"",
+        "func": "msg ={\"payload\":{\n    \"command\":{\"removeMarker\":\"LOC-002\"},\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 330.555552482605,
+        "wires": [
+            [
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "9df8a586b986af91",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 341.555552482605,
+        "wires": [
+            [
+                "9d2ef7a41a8a5933"
+            ]
+        ]
+    },
+    {
+        "id": "bb754959aeaa9557",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 480,
+        "wires": [
+            [
+                "9b2eb9ac76034e14"
+            ]
+        ]
+    },
+    {
+        "id": "d0e371f4e55b28b4",
+        "type": "debug",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "DB7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "47914db03e4105d4",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Update Marker",
+        "func": "var msgOut ={\"payload\":{\n// here are the fields we are definitely expecting:\n    \"command\":{\"removeMarker\":msg.locationName}, // remove if existing marker of same name\n    \"markerData\":[  {  \"lat\":msg.lat,\n                       \"lng\":msg.lng,\n                       \"title\":msg.locationName\n                    }\n                 ]\n    }\n};\n// Here are fields that we check for in the input message and add if required\nif (msg.icon)\n  msgOut.payload.markerData[0].icon = msg.icon;\nif (msg.label)\n  msgOut.payload.markerData[0].label = msg.label;\nif (msg.infoWindow)\n  msgOut.payload.markerData[0].infoWindow = {\"content\": msg.infoWindow};\n \nreturn msgOut;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1050,
+        "y": 690.555552482605,
+        "wires": [
+            [
+                "3a09aa8b672ffb9d",
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "c778331fcdc615ec",
+        "type": "template",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "InfoWindow Content",
+        "field": "infoWindow",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<table>\n  <tr bgcolor=\"#CCEEFF\">\n    <th></th>\n    <th>Temperature</th>\n    <th>Humidity</th> \n  </tr>\n  <tr>\n    <td bgcolor=\"#CCEEFF\"><strong>{{dayY}}</strong></td>\n    <td>{{tempY}}</td>\n    <td>{{humY}}</td> \n  </tr>\n  <tr>\n    <td bgcolor=\"#CCEEFF\"><strong>{{dayT}}</strong></td>\n    <td>{{tempT}}</td>\n    <td>{{humT}}</td> \n  </tr>\n</table>",
+        "x": 910,
+        "y": 770.555552482605,
+        "wires": [
+            [
+                "47914db03e4105d4",
+                "868127970a34f9d3"
+            ]
+        ]
+    },
+    {
+        "id": "5e4dbfc543c5eb62",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "IoT \"GEN-A10123\" Data V1",
+        "func": "msgOut = {\n     \"lat\":55.866310,\n     \"lng\":-4.25850,\n     \"locationName\":\"GEN-A10123\",\n     \"dayY\":\"Yesterday\",\"tempY\":18, \"humY\": 60,\n     \"dayT\":\"Today\", \"tempT\":msg.payload, \"humT\": 64\n};\nreturn msgOut;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 690.555552482605,
+        "wires": [
+            [
+                "3d37bcd8dd6b67fb"
+            ]
+        ]
+    },
+    {
+        "id": "21f4275343011349",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "15",
+        "payloadType": "num",
+        "x": 160,
+        "y": 710.555552482605,
+        "wires": [
+            [
+                "5e4dbfc543c5eb62",
+                "d12a999a18b124db"
+            ]
+        ]
+    },
+    {
+        "id": "868127970a34f9d3",
+        "type": "debug",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "DB4",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 1160,
+        "y": 790.555552482605,
+        "wires": []
+    },
+    {
+        "id": "fabff780ec59b41f",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "IoT \"GEN-A10888\" Data V2",
+        "func": "msgOut = {\n     \"lat\":55.866410,\n     \"lng\":-4.25750,\n     \"locationName\":\"GEN-A10888\",\n     \"dayY\":\"Yesterday\",\"tempY\":16, \"humY\": 60,\n     \"dayT\":\"Today\", \"tempT\":msg.payload, \"humT\": 64};\nreturn msgOut;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 770.555552482605,
+        "wires": [
+            [
+                "eea2473ce62f3471"
+            ]
+        ]
+    },
+    {
+        "id": "0d5532f27731aa62",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "17",
+        "payloadType": "num",
+        "x": 160,
+        "y": 770.555552482605,
+        "wires": [
+            [
+                "fabff780ec59b41f"
+            ]
+        ]
+    },
+    {
+        "id": "b39385058fad69da",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "System Startup",
+        "func": "// Set some global values that we can access from flows\n// These are currently just some image icon URLs used in some places in the Google Maps flow\nglobal.set(\"redMapIcon\",\"http://maps.google.com/mapfiles/ms/micons/red.png\" );\nglobal.set(\"orangeMapIcon\",\"http://maps.google.com/mapfiles/ms/micons/orange.png\" );\nglobal.set(\"greenMapIcon\",\"http://maps.google.com/mapfiles/ms/micons/green.png\" );\nglobal.set(\"blueMapIcon\",\"http://maps.google.com/mapfiles/ms/micons/blue.png\" );\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 870.555552482605,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9245703fa15a53b1",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 560,
+        "y": 870.555552482605,
+        "wires": [
+            [
+                "b39385058fad69da"
+            ]
+        ]
+    },
+    {
+        "id": "eea2473ce62f3471",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "icon colour/label",
+        "func": "// Set the marker colour on the map\nif (msg.tempT < 10)\n    msg.icon = global.get(\"blueMapIcon\");\nelse if (msg.tempT < 20)\n    msg.icon = global.get(\"orangeMapIcon\");\nelse if (msg.tempT >= 20)\n    msg.icon = global.get(\"redMapIcon\");\n    \nmsg.label = msg.tempT.toString() + \"C\"; // label the marker with today's temperature\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 680,
+        "y": 770.555552482605,
+        "wires": [
+            [
+                "c778331fcdc615ec"
+            ]
+        ]
+    },
+    {
+        "id": "3a09aa8b672ffb9d",
+        "type": "debug",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "DB5",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 1260,
+        "y": 690.555552482605,
+        "wires": []
+    },
+    {
+        "id": "3d37bcd8dd6b67fb",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "icon colour/label",
+        "func": "// Set the marker colour on the map, depending on temperature\nif (msg.tempT < 10)\n    msg.icon = global.get(\"blueMapIcon\");\nelse if (msg.tempT < 20)\n    msg.icon = global.get(\"orangeMapIcon\");\nelse if (msg.tempT >= 20)\n    msg.icon = global.get(\"redMapIcon\");\n    \nmsg.label = msg.tempT.toString() + \"C\"; // label the marker with today's temperature\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 680,
+        "y": 690.555552482605,
+        "wires": [
+            [
+                "47914db03e4105d4"
+            ]
+        ]
+    },
+    {
+        "id": "d8dd4796c6456519",
+        "type": "comment",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "When we want a pop-up infoWindow",
+        "info": "",
+        "x": 900,
+        "y": 810.555552482605,
+        "wires": []
+    },
+    {
+        "id": "a6783853567f75af",
+        "type": "comment",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Not using a pop-up infoWindow",
+        "info": "",
+        "x": 860,
+        "y": 650.555552482605,
+        "wires": []
+    },
+    {
+        "id": "c41f373b9b9ed08c",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Zoom ",
+        "func": "var msg ={\"payload\":{\n    \"command\":{\"zoom\":msg.payload}\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 700,
+        "y": 590.555552482605,
+        "wires": [
+            [
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "41bc2b3460a8b41c",
+        "type": "comment",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Slider controls for 'temperature'",
+        "info": "",
+        "x": 160,
+        "y": 870.555552482605,
+        "wires": []
+    },
+    {
+        "id": "2997a157a9bbe27a",
+        "type": "comment",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Slider control for map 'zoom'",
+        "info": "",
+        "x": 510,
+        "y": 630.555552482605,
+        "wires": []
+    },
+    {
+        "id": "6b67f373c85fde1d",
+        "type": "comment",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Set startup things here. Fires once at startup",
+        "info": "",
+        "x": 660,
+        "y": 910.555552482605,
+        "wires": []
+    },
+    {
+        "id": "da6eb64490ea35f5",
+        "type": "comment",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "README - Examples below...",
+        "info": "This is a more general method of setting\nthe markers on the map. \n\nThe two function nodes (for example: IoT \"GEN-A10123\" Data V1)\nsimulate the data that arrives from an IoT device. \nThe 'Update Marker' node takes the IoT data from the incoming\nmessage and extracts the relevant fields to populate the object\nthat is being sent to the map.\nIf an infoWindow is required for a marker then this can\nbe added in the 'InfoWindow Content' template node. In this template\nnode the data values that populate the HTML content come from\nthe incoming message object, so in this line:\n<td>{{tempT}}</td>\nthe data is populated by the incoming msg.tempT element.\n(See the info page for a Node-Red 'template'node).\nIf an infoWindow is not required then we do not use this node.\n",
+        "x": 740,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4e90fd4a795ea0b5",
+        "type": "comment",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Sliders are in the Dashboard   /UI",
+        "info": "",
+        "x": 160,
+        "y": 610.555552482605,
+        "wires": []
+    },
+    {
+        "id": "ddb7bf79c7183307",
+        "type": "comment",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Your map will be at http://<YOUR Node-RED URL>/map Please note: this is http and NOT https",
+        "info": "",
+        "x": 890,
+        "y": 270,
+        "wires": []
+    },
+    {
+        "id": "75ab226162c83536",
+        "type": "inject",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "topic": "",
+        "payload": "7",
+        "payloadType": "num",
+        "x": 400,
+        "y": 590.555552482605,
+        "wires": [
+            [
+                "4496246a94319e6f"
+            ]
+        ]
+    },
+    {
+        "id": "f25f208e38f1d4ed",
+        "type": "ui_slider",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "label": "Temperature GEN-A10888",
+        "tooltip": "",
+        "group": "8071b27e83febf9a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "topicType": "str",
+        "min": "7",
+        "max": "23",
+        "step": 1,
+        "className": "",
+        "x": 170,
+        "y": 810.555552482605,
+        "wires": [
+            [
+                "fabff780ec59b41f"
+            ]
+        ]
+    },
+    {
+        "id": "4095c269a3625574",
+        "type": "ui_slider",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "label": "Temperature GEN-A10123",
+        "tooltip": "",
+        "group": "8071b27e83febf9a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "topicType": "str",
+        "min": "7",
+        "max": "23",
+        "step": 1,
+        "className": "",
+        "x": 170,
+        "y": 670.555552482605,
+        "wires": [
+            [
+                "5e4dbfc543c5eb62"
+            ]
+        ]
+    },
+    {
+        "id": "4496246a94319e6f",
+        "type": "ui_slider",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "label": "Zoom",
+        "tooltip": "",
+        "group": "8071b27e83febf9a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "topicType": "str",
+        "min": "3",
+        "max": "22",
+        "step": 1,
+        "className": "",
+        "x": 540,
+        "y": 590.555552482605,
+        "wires": [
+            [
+                "c41f373b9b9ed08c"
+            ]
+        ]
+    },
+    {
+        "id": "d12a999a18b124db",
+        "type": "debug",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "DB6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 321,
+        "y": 733,
+        "wires": []
+    },
+    {
+        "id": "96cf9a54f7335f47",
+        "type": "link in",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "links": [
+            "52b82fcf.27b97",
+            "6fe86518.74a40c",
+            "696bc684.6cecd8",
+            "e8073dbe.b7afa",
+            "f8d1b4f0.26e458",
+            "2f274c2a97f82cfb"
+        ],
+        "x": 735,
+        "y": 120,
+        "wires": [
+            [
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "8e489aaa937d5ad1",
+        "type": "debug",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "DB1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5eba39cfec22f1a7",
+        "type": "comment",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Please run on Chrome browser",
+        "info": "",
+        "x": 970,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9b2eb9ac76034e14",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Some IoT data at a location",
+        "func": "//Updated 17 Jan 2024\n// This is an example message that has been received via MQTT \n// from an IoT device.\n// So we are just using this function to simulate the arrival of this example message.\nmsg = {\n    \"topic\": \"pb54327tt/dev-PC0001/telemetry\",\n    \"payload\": {\n        \"humidity\": \"74\",\n        \"temperature\": \"22\",\n        \"location\": {\n            \"lat\":55.866310,\n            \"lng\":-4.25850\n        }\n    },\n    \"qos\": 0,\n    \"retain\": false,\n    \"_msgid\": \"03d698f6903e6a7b\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 480,
+        "wires": [
+            [
+                "7f19a9a1c2f50cfc",
+                "fd5f652dbf971cdb"
+            ]
+        ]
+    },
+    {
+        "id": "fd5f652dbf971cdb",
+        "type": "function",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Update Marker",
+        "func": "// Form a command message for the Goggle Maps subflow.\n\n// Split the MQTT topic string using forward slash as the delimiter\nvar parts = msg.topic.split('/'); //form an array containing the individual parts of the topic\n// We will automatically form a unique marker 'title' for the Google Maps command\n// using the organisation and device-id\n\n// Get organisation ID and IoT device ID from array to form unique marker title.\nconst title = parts[0] + '-' + parts[1]; // string concatenate\n// Get IoT device ID to use as marker label\nconst label = parts[1] ; // 'label' is the IoT device ID\n\nconst location = msg.payload.location;\nvar msgOut ={\"payload\":{\n    \"command\":{\"removeMarker\": title},\n     \"markerData\":[  {  \"lat\":location.lat,\n                        \"lng\":location.lng,\n                        \"title\": title, \n                        //\"label\": \"T:\" + msg.payload.temperature,\n                        \"label\": label, // The visible marker label\n                        \"icon\": \"http://maps.google.com/mapfiles/ms/micons/green.png\",\n                        \"infoWindow\": {\"content\": \"<p>Temperature: \" + msg.payload.temperature + \"</p><p>Humidity: \" + msg.payload.humidity + \"<p>\" }\n                    }\n                 ]\n    }\n};\nreturn msgOut;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 440,
+        "wires": [
+            [
+                "d0e371f4e55b28b4",
+                "51a7a2ff7a033036"
+            ]
+        ]
+    },
+    {
+        "id": "7f19a9a1c2f50cfc",
+        "type": "debug",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "DB8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "51a7a2ff7a033036",
+        "type": "subflow:929742f0246c257a",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "",
+        "x": 850,
+        "y": 180,
+        "wires": [
+            [
+                "431fe5c49ae7764b"
+            ],
+            [
+                "1908ccc858de832d"
+            ]
+        ]
+    },
+    {
+        "id": "431fe5c49ae7764b",
+        "type": "debug",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Maps-subflow-out-1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1908ccc858de832d",
+        "type": "debug",
+        "z": "9edd6e2bcb06c3f8",
+        "name": "Maps-subflow-out-2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 200,
+        "wires": []
+    }
+]
